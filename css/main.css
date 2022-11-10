@@ -158,6 +158,8 @@ header ul li:hover a {
   display: flex;
   z-index: 2;
   background-color: var(--color3);
+  justify-content: center;
+  align-items: center;
 }
 
 .card-random:hover {
