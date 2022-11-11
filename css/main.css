@@ -168,7 +168,7 @@ header ul li:hover a {
   height: 50%;
   border-radius: 13px;
   overflow: visible;
-  transform: translateX(20%);
+  transform: translateX(15%);
   transition: 2s;
 }
 
@@ -187,11 +187,30 @@ header ul li:hover a {
   left: 15%;
   animation: opacidade-bloco 3s;
   align-items: center;
-  justify-content: center;
+  background-image: linear-gradient(90deg, var(--color3), var(--color4));
+  font-family: "Sarala", sans-serif;
+  text-transform: uppercase;
+
+  background: url("../img/teamwolffundo.jpg");
 }
 
+.card-random:hover + .card-lat h2 {
+  font-size: 15px;
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
+  filter: brightness(155%);
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  padding-left: 8%;
+  animation: opacidade-bloco 10s;
+}
 .card-random:hover h3 {
   display: none;
+  transition: 3s;
+}
+
+.card-random:hover img {
+  animation: opacidade-bloco 3s;
 }
 
 @keyframes opacidade-bloco {
@@ -200,6 +219,18 @@ header ul li:hover a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes led-img {
+  0% {
+    box-shadow: 1px 1px 10px red;
+  }
+  50% {
+    box-shadow: 1px 1px 10px blue;
+  }
+  100% {
+    box-shadow: 1px 1px 10px red;
   }
 }
 
@@ -217,6 +248,7 @@ header ul li:hover a {
 .card-random:hover .card1 {
   display: flex;
   transition: 10s;
+  animation: led-img 2s ease-in-out alternate infinite, opacidade-bloco 4s;
 }
 
 .card1 img {
@@ -224,4 +256,17 @@ header ul li:hover a {
   height: 100%;
   filter: opacity(70%);
   border-radius: 20px;
+}
+
+.card-random h3 {
+  font-family: "Sarala", sans-serif;
+  text-transform: uppercase;
+  color: var(--color1);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.416);
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.card-random:hover h3 {
+  animation: opacidade-bloco 3s;
 }
